@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LightLife.chia｜帶著覺察回到內在的家，讓生命發光</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --bg-card: #FFFFFF;
+    --text-primary: #2C3E2D;
+    --text-secondary: #5C6B5D;
+    --text-muted: #8B9588;
+    --accent: #4A6B4D;
+    --accent-light: #E8EFE7;
+    --accent-warm: #C9A876;
+    --border: #E5E1D8;
+    --highlight-bg: #F5F1E8;
+    --emphasis-bg: #EFE9DC;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Serif TC', 'Songti TC', Georgia, serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.9;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  .brand {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 56px;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 72px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    font-style: italic;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  p strong { color: var(--text-primary); font-weight: 500; }
+  em { font-style: italic; color: var(--text-primary); }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 64px 0 24px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 40px 0 12px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  .quote {
+    border-left: 3px solid var(--accent-warm);
+    background: var(--highlight-bg);
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+
+  .quote p {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.95;
+  }
+
+  .tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 12px;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .divider {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 18px;
+    letter-spacing: 0.5em;
+    margin: 64px 0;
+  }
+
+  .journey { margin: 32px 0; }
+
+  .journey-stage {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 0 24px;
+    margin-bottom: 40px;
+    align-items: start;
+  }
+
+  .stage-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .stage-content h3 { margin-top: 0; margin-bottom: 10px; }
+  .stage-content p { font-size: 15px; margin-bottom: 0; }
+
+  .transform-block {
+    background: var(--emphasis-bg);
+    border-radius: 4px;
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .transform-label {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .transform-text {
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+
+  .course-card {
+    background: var(--bg-card);
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+    padding: 44px 48px;
+    margin: 32px 0;
+  }
+
+  .course-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .course-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.45;
+  }
+
+  .price-main {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .price-twd {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .course-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-family: 'Noto Serif TC', Georgia, serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn:hover { opacity: 0.85; }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+  }
+
+  .btn-warm {
+    background: var(--accent-warm);
+    color: #fff;
+    border: none;
+  }
+
+  .service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 40px;
+    margin-bottom: 20px;
+  }
+
+  .bundle-card {
+    background: var(--emphasis-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 36px 40px;
+    margin-bottom: 20px;
+  }
+
+  .service-label {
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .service-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .service-price {
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--accent);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .service-price-twd {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+
+  .service-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    margin-bottom: 0;
+  }
+
+  .service-includes {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+
+  .service-includes li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .service-includes li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: var(--accent-warm);
+    font-size: 22px;
+    line-height: 1;
+    top: 3px;
+    font-weight: 700;
+  }
+
+  .service-breakdown {
+    background: var(--highlight-bg);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .service-breakdown strong { color: var(--text-primary); }
+
+  .cta-block {
+    background: var(--accent-light);
+    border-radius: 4px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 64px 0 0;
+  }
+
+  .cta-block h2 {
+    font-size: 22px;
+    margin: 0 0 16px;
+    text-align: center;
+  }
+
+  .cta-block p {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 72px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-quote {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .footer-name {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 48px 20px 80px; }
+    .hero h1 { font-size: 24px; }
+    h2 { font-size: 20px; margin: 48px 0 20px; }
+    .service-card, .course-card, .bundle-card { padding: 28px 24px; }
+    .cta-block { padding: 36px 24px; }
+    .transform-block { padding: 28px 24px; }
+    .service-price { font-size: 22px; }
+    .price-main { font-size: 26px; }
+    .journey-stage { grid-template-columns: 36px 1fr; gap: 0 16px; }
+    .stage-num { width: 36px; height: 36px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="brand">LightLife · chia</div>
+
+  <div class="hero">
+    <h1>帶著覺察回到內在的家，<br>讓生命發光</h1>
+    <p class="hero-sub">正念不是一種技巧，是一種生活哲學。</p>
+  </div>
+
+  <p>你非常努力，非常認真。一直在學習、成長，不斷地想變得更好。</p>
+  <p>但有時候，在某個安靜的時刻，內心卻會浮現：<em>這樣的生活，好像不是我真正想要的。</em></p>
+  <p>並非人生出了問題，卻有種說不清楚的感覺，住在你心裡很久了。你嚮往的不是某個目標，而是一種從內心深處升起的平靜、豐盛、真正活著的感覺——而那感覺，好像總是離你一步之遙。</p>
+
+  <div class="quote">
+    <p>生命本是豐盛的。只是我們太忙著往外追，忘了回來看看自己內在已經擁有的。</p>
+  </div>
+
+  <h2>我是 Chia</h2>
+
+  <p>我從舞者走到燈光設計師，從台北到斯德哥爾摩，再到倫敦，最後落腳西班牙地中海岸。那些年，我一直在追尋更高的層次、更好的地方。</p>
+  <p>直到在倫敦辦完一場展覽——拿了新秀設計師獎，受到業界的好評，完成了一個非凡的里程碑。但隔天早上醒來，內心卻空空的。那種感覺像是爬到了一座山頂，才發現自己不知道接下來要往哪裡去。</p>
+  <p>但也是在那個展覽裡，我第一次真正理解：光不只是設計，它改變一個人當下的感受。正念也不只是冥想——它是你和你的感受之間的關係，是你和你的生活之間的關係。</p>
+  <p>從那之後，我把多年的<strong>身體覺察、空間感知、藝術與設計的視野、情緒療癒的實踐</strong>——全部帶進我的正念教學裡。帶領學生不只是學習方法，而是真正經歷一段由內而外的轉變。</p>
+  <p>現在我在西班牙生活，成為了母親，還是每天在練習。生命帶給我的每一個功課，都讓我更確信——<em>你也值得擁有這樣的生活。</em></p>
+
+  <div class="tags">
+    <span class="tag">身體覺察</span>
+    <span class="tag">空間與光</span>
+    <span class="tag">情緒療癒</span>
+    <span class="tag">正念生活</span>
+    <span class="tag">生活設計</span>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <h2>感光生活｜12 週正念線上課</h2>
+
+  <p>這堂課，是為那些知道自己想要不一樣的生活，卻還不知道從哪裡開始的你設計的。</p>
+  <p>12 週，三個階段，一條由內而外的旅程——從學會回到自己，到真正把正念活進日常。</p>
+
+  <div class="journey">
+
+    <div class="journey-stage">
+      <div class="stage-num">一</div>
+      <div class="stage-content">
+        <h3>學會專注——回到當下</h3>
+        <p>正念的起點，不是放空，而是學會<strong>把注意力放在對的地方</strong>。我們從五感覺察、身體感知、到與空間環境的關係，用不同的方式練習專注——讓你發現，生活裡其實有那麼多美好，只是你一直沒有看見。</p>
+      </div>
+    </div>
+
+    <div class="journey-stage">
+      <div class="stage-num">二</div>
+      <div class="stage-content">
+        <h3>調整心態——用什麼樣的眼光看生活</h3>
+        <p>知道專注在哪裡還不夠，更重要的是<strong>用什麼樣的心態去感受</strong>。這個階段，我們一起看見自己的慣性與恐懼，練習把慈愛、好奇心、還有一點玩心帶進生活——讓每一個當下，都可以是豐盛的。</p>
+      </div>
+    </div>
+
+    <div class="journey-stage">
+      <div class="stage-num">三</div>
+      <div class="stage-content">
+        <h3>探索自我——創造屬於你的生活</h3>
+        <p>當你更認識自己、知道怎麼回到當下，接下來我們直視人生提問的核心：<strong>我想如何生而為人？我想過上什麼樣的生活？</strong>這個階段，我們一起探索你內心真實的聲音，用正念帶來的覺知，去創造一個更貼近自己的生活方式。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="transform-block">
+    <div class="transform-label">走完這 12 週</div>
+    <p class="transform-text">你會看見內心有光、眼神閃閃發亮的自己。<br>對自己有更深的信任，面對生活的各種起伏，<br>可以從容、平靜、甚至帶著好奇心去擁抱未知帶來的驚喜。<br>知道自己可以，知道自己值得過上內心嚮往的生活。</p>
+  </div>
+
+  <div class="course-card">
+    <div class="course-eyebrow">📚 正念線上課程</div>
+    <div class="course-title">感光生活｜12 週正念線上課</div>
+    <div class="price-main">€388</div>
+    <div class="price-twd">約 NT$13,900 · 完整課程，終身可回看</div>
+    <p class="course-desc">12 週完整的正念學習旅程，涵蓋身體覺察、情緒理解、心態調整、到生活設計。每週影片、音檔與書寫練習，按自己的節奏走。<br><br>走到一半，想要有人陪你深化？可以隨時加購深度陪伴方案，我們從你目前的階段繼續出發。</p>
+    <a href="https://www.lightlifechia.com/onlinecourse-2026" target="_blank" class="btn btn-primary">閱讀課綱，加入課程</a>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <h2>想要有人陪你走？</h2>
+
+  <p>有些東西，自己讀、自己練，還是會卡住。不是你不夠努力，是有些盲點，需要另一雙眼睛才能看見。</p>
+
+  <div class="service-card">
+    <div class="service-label">🌱 深度陪伴</div>
+    <div class="service-title">深度陪伴方案｜三個月，每月兩次</div>
+    <div class="service-price">€880</div>
+    <div class="service-price-twd">約 NT$31,680 · 三個月，每兩週一次，共六次</div>
+    <p class="service-desc">這不是六堂課的時數換算，而是一段有系統、有架構的三個月陪伴旅程——陪你走上屬於自己的正念根基。</p>
+    <p class="service-desc" style="margin-top: 12px;">每個月的節奏是：兩週是 Google Meet 線上深度陪伴（我們一起）；另外兩週是自主學習時段，按照你自己的步調走，但有我即時陪伴。我會為你選定這個階段最適合的課程方向與書寫練習，走完之後傳筆記給我——我接住你的反思，下次見面從那裡繼續深入。</p>
+    <ul class="service-includes">
+      <li>每兩週一次深度 Google Meet 陪伴（50 分鐘）× 6，一個月兩次</li>
+      <li>每月兩次自主學習時段，由我為你選定方向與書寫練習</li>
+      <li>每次結束後的練習方向與資源補充</li>
+      <li>隨時可以找我，offline 陪伴 stand by</li>
+    </ul>
+    <div class="service-breakdown">
+      三個月後，你擁有的不是「上過六堂課」，而是<strong>一個屬於自己的正念根基</strong>——知道怎麼在生活裡回到自己，知道怎麼繼續走。
+    </div>
+    <a href="https://www.lightlifechia.com/store/p/coachingprogram" target="_blank" class="btn btn-secondary">了解方案 · 預約諮詢</a>
+  </div>
+
+  <div class="bundle-card">
+    <div class="service-label">🌿 最完整方案</div>
+    <div class="service-title">感光生活 12 週線上課＋深度陪伴方案</div>
+    <div class="service-price">€1,188</div>
+    <div class="service-price-twd">約 NT$42,480</div>
+    <p class="service-desc">完整的學習架構，加上三個月的一對一陪伴。課程給你系統和知識，陪伴讓那些知識真正活進你的生活。兩個一起走，是最完整的旅程。</p>
+    <ul class="service-includes">
+      <li>感光生活 12 週正念線上課（終身可回看）</li>
+      <li>每兩週一次深度 Google Meet 陪伴（50 分鐘）× 6，一個月兩次</li>
+      <li>每月兩次自主學習時段，由我為你選定方向與書寫練習</li>
+      <li>每次結束後的練習方向與資源補充</li>
+      <li>隨時可以找我，offline 陪伴 stand by</li>
+    </ul>
+    <div class="service-breakdown">
+      <strong>分開購買：</strong>線上課 €388 ＋ 深度陪伴 €880 = €1,268<br>
+      <strong>一起購買：€1,188</strong>，省下 €80。
+    </div>
+    <a href="https://www.lightlifechia.com/store/p/12weeksprogram" target="_blank" class="btn btn-primary">立即加入完整方案</a>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <h2>還在考慮？先來試試看。</h2>
+
+  <p>不確定哪個方案適合自己，或者只是想先感受一下我的帶領方式——單次諮詢是最輕鬆的起點。</p>
+
+  <div class="service-card">
+    <div class="service-label">單次諮詢</div>
+    <div class="service-title">🍃 單次諮詢｜35 分鐘 Google Meet</div>
+    <div class="service-price">€75</div>
+    <div class="service-price-twd">約 NT$2,700</div>
+    <p class="service-desc">一個問題、一個卡住的地方、或想進一步了解正念陪伴、正念生活是什麼。帶著你現在的狀態來，我們用正念的角度一起看看，給你一個可以帶走的方向。</p>
+    <a href="https://www.lightlifechia.com/store/p/onesession" target="_blank" class="btn btn-secondary">預約單次諮詢</a>
+  </div>
+
+  <div class="cta-block">
+    <h2>不確定從哪裡開始？</h2>
+    <p>先來聊聊。帶著你現在的樣子，不需要準備任何東西。</p>
+    <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">我現在育兒生活，能開的時段非常有限。<br>但只要我願意接受的學生，我都會用心對待。</p>
+    <a href="https://www.lightlifechia.com/store/p/onesession" target="_blank" class="btn btn-warm" style="margin-top: 28px;">預約 35 分鐘單次諮詢</a>
+  </div>
+
+  <div class="footer">
+    <p class="footer-quote">讓我們一起，把生活活成一盞內在的光。</p>
+    <p class="footer-name">Chia</p>
+  </div>
+
+</div>
+</body>
+</html>
