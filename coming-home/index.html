@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Noto+Serif+TC:wght@400;600&text=CESabcehiklmrstu%E2%80%A7%E3%80%81%E3%80%82%E3%80%8C%E3%80%8D%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%8D%E4%B9%8B%E4%BA%86%E4%BA%8B%E4%BB%80%E4%BB%A5%E4%BB%B6%E4%BB%BB%E4%BD%A0%E4%BE%86%E4%BF%9D%E4%BF%A1%E5%80%8B%E5%80%91%E5%80%99%E5%81%9A%E5%85%89%E5%85%8D%E5%85%A5%E5%85%A7%E5%88%86%E5%88%B0%E5%8A%9B%E5%8A%A0%E5%8B%99%E5%8D%81%E5%8E%BB%E5%8F%8B%E5%8F%96%E5%8F%AF%E5%90%8C%E5%90%B8%E5%91%B3%E5%91%BC%E5%92%8C%E5%93%AA%E5%94%AF%E5%96%9C%E5%9B%9E%E5%9C%88%E5%9C%A8%E5%9C%B0%E5%9D%90%E5%A2%83%E5%A4%96%E5%A4%9A%E5%A4%A9%E5%A5%BD%E5%A6%82%E5%AD%B8%E5%AE%89%E5%AE%8C%E5%AE%98%E5%AE%9A%E5%AE%B6%E5%AF%84%E5%AF%9F%E5%B0%81%E5%B0%8F%E5%B0%91%E5%B0%B1%E5%B1%95%E5%B7%B1%E5%B8%B6%E5%B8%B8%E5%B9%B3%E5%BA%8F%E5%BA%A6%E5%BB%BA%E5%BE%80%E5%BE%85%E5%BE%88%E5%BE%8C%E5%BE%97%E5%BE%9E%E5%BF%83%E5%BF%99%E5%BF%B5%E6%82%9F%E6%83%B3%E6%84%8F%E6%84%9F%E6%88%90%E6%88%91%E6%88%96%E6%88%B4%E6%89%8B%E6%89%93%E6%89%BE%E6%8A%8A%E6%8C%81%E6%8C%89%E6%8E%92%E6%8E%A5%E6%8E%A8%E6%92%AD%E6%94%BE%E6%96%B7%E6%96%B9%E6%97%A5%E6%98%AF%E6%99%82%E6%9A%96%E6%9B%B4%E6%9C%80%E6%9C%83%E6%9C%89%E6%9C%8B%E6%9C%9F%E6%9C%AC%E6%9E%9C%E6%A8%A3%E6%A9%9F%E6%AA%94%E6%AD%A1%E6%AD%A3%E6%AE%B5%E6%B2%92%E6%B3%95%E6%B3%A8%E6%B4%BB%E6%B6%88%E6%BA%AB%E6%BB%91%E6%BC%94%E7%85%A7%E7%8D%A8%E7%8F%BE%E7%94%9F%E7%95%B6%E7%9A%84%E7%9B%9E%E7%9C%BC%E7%9D%9B%E7%A2%B0%E7%AB%8B%E7%AE%97%E7%AE%B1%E7%B5%A6%E7%B7%B4%E7%BF%92%E8%80%B3%E8%81%9A%E8%81%B2%E8%81%BD%E8%87%AA%E8%88%87%E8%88%92%E8%90%BD%E8%91%97%E8%99%95%E8%A2%AB%E8%A3%A1%E8%A6%8B%E8%A6%BA%E8%A7%80%E8%A7%92%E8%A8%82%E8%A8%98%E8%AA%BF%E8%AB%8B%E8%AE%93%E8%B2%BB%E8%B3%AA%E8%B5%B7%E8%BA%AB%E8%BA%BA%E8%BC%B8%E8%BF%8E%E8%BF%91%E9%80%99%E9%80%B2%E9%81%8E%E9%81%93%E9%81%A9%E9%82%80%E9%82%8A%E9%82%A3%E9%83%BD%E9%88%95%E9%90%98%E9%96%89%E9%96%8B%E9%96%B1%E9%9A%A8%E9%9B%86%E9%9B%A2%E9%9D%9C%E9%9F%B3%E9%AB%94%E9%BA%BC%EF%BC%81%EF%BC%88%EF%BC%89%EF%BC%8C%EF%BC%9F&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; background:oklch(96% 0.009 95); }
+  a { color:oklch(56% 0.06 150); }
+  a:hover { color:oklch(50% 0.06 150); }
+  @keyframes fadeInBlock { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes breathe { 0%,100% { box-shadow:0 0 0 0 oklch(56% 0.06 150 / 0%); } 50% { box-shadow:0 0 0 22px oklch(56% 0.06 150 / 14%); } }
+</style>
+</helmet>
+
+<div style="max-width:640px; margin:0 auto; background:oklch(96% 0.009 95); font-family:-apple-system,sans-serif;">
+
+  <div style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:100px 32px; box-sizing:border-box; position:relative; overflow:hidden;">
+    <img src="assets/forest-welcome-bg-compressed.jpg" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.28; z-index:0;">
+    <div style="position:relative; z-index:1;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:oklch(52% 0.015 80); margin-bottom:32px;">Welcome</div>
+    <h1 style="font-family:'Noto Serif TC',serif; font-weight:600; font-size:30px; color:#2C5A46; margin:0 0 36px; line-height:1.5;">歡迎回家</h1>
+    <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2.05; color:oklch(52% 0.015 80);">
+      <div>接下來的十分鐘，請放下手邊正在忙的事，</div>
+      <div style="margin-top:14px;">這裡有一段音檔、和一個小小的練習邀請。</div>
+      <div style="margin-top:14px;">邀請你安靜聽完音檔後，帶著正念回到日常裡。</div>
+    </div>
+    <div style="font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; letter-spacing:0.1em; color:#2C5A46; margin-top:44px;">往下滑，聽取音檔</div>
+    <div style="margin-top:10px; color:#2C5A46; font-size:18px;">↓</div>
+    </div>
+  </div>
+
+  <div style="padding:64px 32px; border-top:1px solid oklch(29% 0.018 70 / 10%); box-sizing:border-box;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:oklch(52% 0.015 80); margin-bottom:18px;">Coming Home</div>
+    <h2 style="font-family:'Noto Serif TC',serif; font-weight:600; font-size:26px; color:#2C5A46; margin:0 0 28px; line-height:1.5;">回家，回到身體裡</h2>
+    <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2; color:oklch(52% 0.015 80);">
+      <p style="margin:0 0 20px;">我們一天裡去了很多地方，唯獨很少回到身體裡。這段音檔帶你把注意力放回呼吸，放回身體的覺察裡，靜靜地待在這裡。</p>
+      <p style="margin:0; font-weight:600; color:oklch(29% 0.018 70);">身體，是你離自己最近的一個家。</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:center; margin:48px 0 8px;">
+      <audio ref="{{ audioRef }}" src="assets/coming-home.mp3"></audio>
+      <button onClick="{{ togglePlay }}" style="width:96px; height:96px; border-radius:50%; border:1.5px solid oklch(56% 0.06 150); background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0; animation:{{ playing ? 'breathe 5s ease-in-out infinite' : 'none' }};">
+        <sc-if value="{{ playing }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; gap:6px;">
+            <div style="width:5px; height:22px; background:oklch(56% 0.06 150);"></div>
+            <div style="width:5px; height:22px; background:oklch(56% 0.06 150);"></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notPlaying }}" hint-placeholder-val="{{ true }}">
+          <div style="width:0; height:0; border-top:11px solid transparent; border-bottom:11px solid transparent; border-left:18px solid oklch(56% 0.06 150); margin-left:5px;"></div>
+        </sc-if>
+      </button>
+      <div style="width:100%; height:1px; background:oklch(29% 0.018 70 / 12%); margin-top:28px; position:relative;">
+        <div style="position:absolute; left:0; top:0; height:100%; width:{{ progressPct }}%; background:oklch(56% 0.06 150);"></div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif; font-size:13px; color:oklch(52% 0.015 80); margin-top:10px; letter-spacing:0.05em;">{{ timeLabel }}</div>
+    </div>
+
+    <p style="font-family:'Noto Serif TC',serif; font-size:13px; color:oklch(52% 0.015 80); text-align:center; line-height:1.8; margin:24px 0 0;">戴上耳機，找一個不會被打斷的角落。坐著或躺著都可以，眼睛閉上更好。</p>
+
+    <sc-if value="{{ notRevealed }}" hint-placeholder-val="{{ true }}">
+      <div style="text-align:center; margin-top:32px;">
+        <span onClick="{{ reveal }}" style="font-family:'Noto Serif TC',serif; font-size:13px; color:oklch(52% 0.015 80); text-decoration:underline; cursor:pointer;">我聽完了，展開下一個任務</span>
+      </div>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+    <div style="animation:fadeInBlock 900ms ease forwards;">
+      <img src="assets/photo-1.webp" alt="生活照" style="width:100%; height:240px; display:block; object-fit:cover; object-position:center;">
+
+      <div style="padding:64px 32px; box-sizing:border-box;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:oklch(52% 0.015 80); margin-bottom:18px;">A Small Practice</div>
+        <h2 style="font-family:'Noto Serif TC',serif; font-weight:600; font-size:24px; color:#2C5A46; margin:0 0 26px; line-height:1.5;">現在，去做一件你本來就會做的事</h2>
+        <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:1.9; color:oklch(52% 0.015 80);">
+          <p style="margin:0 0 18px;">做的時候，記得把感官打開。</p>
+          <div style="margin:0 0 22px;">
+            <div style="margin-bottom:10px;">・手碰到的溫度和質地是什麼？</div>
+            <div style="margin-bottom:10px;">・有沒有味道？</div>
+            <div style="margin-bottom:10px;">・有沒有一個聲音，是你平常從來沒注意過的？</div>
+            <div>・光從哪裡進來，落在哪裡？</div>
+          </div>
+          <p style="margin:0 0 18px;">做的當下，保持身體上的覺察。</p>
+          <p style="margin:0; font-weight:600; color:oklch(29% 0.018 70);">正念不在外境，在你的心裡。</p>
+        </div>
+      </div>
+
+      <img src="assets/photo-2.webp" alt="生活照" style="width:100%; height:240px; display:block; object-fit:cover; object-position:center;">
+
+      <div style="padding:64px 32px; box-sizing:border-box; text-align:center;">
+        <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2; color:oklch(52% 0.015 80); margin-bottom:36px;">
+          <p style="margin:0 0 16px;">如果你喜歡這樣的生活練習，歡迎加入「感光生活圈」！那裡，有我自己在生活裡學習正念的體悟與觀察。</p>
+        </div>
+        <a href="https://lightlifechia.substack.com/about" target="_blank" rel="noopener" style="display:inline-block; border:1px solid #2C5A46; background:transparent; color:#2C5A46; padding:14px 30px; font-size:15px; font-family:'Noto Serif TC',serif; cursor:pointer; letter-spacing:0.05em; text-decoration:none;">加入感光生活圈</a>
+        <div style="font-family:'Noto Serif TC',serif; font-size:12px; color:oklch(52% 0.015 80); margin-top:14px; margin-bottom:36px;">免費訂閱，隨時可以取消。</div>
+        <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2; color:oklch(52% 0.015 80);">
+          <p style="margin:0 0 16px;">那是我在 Substack 建立的生活圈，和同樣想過上內心安定、舒適的生活的朋友們聚集之處。我會不定期寄封信給你，沒有推播、沒有演算法排序，就是安安靜靜地到你的信箱。</p>
+          <p style="margin:0;">如果你喜歡，<span style="color:#2C5A46;">按上方加入感光生活圈按鈕，到 Substack輸入你的Email訂閱（Subscribe）</span>，我們下回見！</p>
+        </div>
+
+        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#2C5A46; margin-top:48px; line-height:1.7; text-align:center;">
+          <div>讓我們一起，把生活活成一盞內在的光。</div>
+          <div>— Chia</div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+function fmt(sec) {
+  if (!isFinite(sec) || sec < 0) sec = 0;
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return m + ':' + String(s).padStart(2, '0');
+}
+
+class Component extends DCLogic {
+  state = { playing: false, revealed: false, currentTime: 0, duration: 0 };
+  audioRef = React.createRef();
+
+  togglePlay = () => {
+    const a = this.audioRef.current;
+    if (!a) return;
+    if (this.state.playing) { a.pause(); } else { a.play(); }
+    this.setState(s => ({ playing: !s.playing }));
+  };
+  handleTimeUpdate = () => {
+    const a = this.audioRef.current;
+    if (a) this.setState({ currentTime: a.currentTime });
+  };
+  handleDurationChange = () => {
+    const a = this.audioRef.current;
+    if (a) this.setState({ duration: a.duration });
+  };
+  handleEnded = () => this.setState({ playing: false, currentTime: 0 });
+  reveal = () => this.setState({ revealed: true });
+
+  componentDidMount() {
+    const a = this.audioRef.current;
+    if (!a) return;
+    a.addEventListener('timeupdate', this.handleTimeUpdate);
+    a.addEventListener('durationchange', this.handleDurationChange);
+    a.addEventListener('ended', this.handleEnded);
+  }
+
+  componentWillUnmount() {
+    const a = this.audioRef.current;
+    if (!a) return;
+    a.removeEventListener('timeupdate', this.handleTimeUpdate);
+    a.removeEventListener('durationchange', this.handleDurationChange);
+    a.removeEventListener('ended', this.handleEnded);
+  }
+
+  renderVals() {
+    const s = this.state;
+    const pct = s.duration ? (s.currentTime / s.duration) * 100 : 0;
+    return {
+      ...s,
+      notPlaying: !s.playing,
+      notRevealed: !s.revealed,
+      togglePlay: this.togglePlay,
+      reveal: this.reveal,
+      audioRef: this.audioRef,
+      progressPct: pct,
+      timeLabel: fmt(s.currentTime) + ' ／ ' + fmt(s.duration),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
