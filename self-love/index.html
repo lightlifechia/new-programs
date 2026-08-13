@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>以愛陪伴自己</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:oklch(96% 0.009 95); }
+  a { color:oklch(56% 0.06 150); }
+  a:hover { color:oklch(50% 0.06 150); }
+  @keyframes fadeInBlock { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes breathe { 0%,100% { box-shadow:0 0 0 0 oklch(56% 0.06 150 / 0%); } 50% { box-shadow:0 0 0 22px oklch(56% 0.06 150 / 14%); } }
+  .stripes { background-image: repeating-linear-gradient(45deg, oklch(88% 0.012 90) 0px, oklch(88% 0.012 90) 10px, oklch(92% 0.009 92) 10px, oklch(92% 0.009 92) 20px); }
+  #reveal-section { display:none; }
+  #reveal-section.shown { display:block; animation: fadeInBlock 900ms ease forwards; }
+  #reveal-link.hidden { display:none; }
+  #play-btn { width:96px; height:96px; border-radius:50%; border:1.5px solid oklch(56% 0.06 150); background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0; }
+  #play-btn.playing { animation: breathe 5s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<div style="max-width:640px; margin:0 auto; background:oklch(96% 0.009 95); font-family:-apple-system,sans-serif;">
+
+  <div style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:100px 32px; box-sizing:border-box; position:relative; overflow:hidden;">
+    <img src="assets/hero-bg.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.28; z-index:0;">
+    <div style="position:relative; z-index:1;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:oklch(52% 0.015 80); margin-bottom:32px;">Welcome</div>
+    <h1 style="font-family:'Noto Serif TC',serif; font-weight:600; font-size:30px; color:#2C5A46; margin:0 0 36px; line-height:1.5;">以愛陪伴自己</h1>
+    <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2.05; color:oklch(52% 0.015 80);">
+      <div>不論你因為什麼原因前來、遇見這份『陪伴自己』的練習</div>
+      <div style="margin-top:14px;">我都很開心，你願意開始以「愛」陪伴自己</div>
+      <div style="margin-top:14px;">接下來請你好好專注在這練習</div>
+      <div style="margin-top:14px;">希望你能感受這份專屬於你的陪伴</div>
+    </div>
+    <div style="font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:600; letter-spacing:0.1em; color:#2C5A46; margin-top:44px;">往下滑，開始練習</div>
+    <div style="margin-top:10px; color:#2C5A46; font-size:18px;">↓</div>
+    </div>
+  </div>
+
+  <div style="padding:64px 32px; border-top:1px solid oklch(29% 0.018 70 / 10%); box-sizing:border-box;">
+    <div style="font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:oklch(52% 0.015 80); margin-bottom:18px;">With Love</div>
+    <h2 style="font-family:'Noto Serif TC',serif; font-weight:600; font-size:26px; color:#2C5A46; margin:0 0 28px; line-height:1.5;">把愛，帶回給自己</h2>
+    <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2; color:oklch(52% 0.015 80);">
+      <p style="margin:0; font-weight:600; color:oklch(29% 0.018 70);">重點是你願意，停下來，陪自己十分鐘。</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:center; margin:40px 0 8px;">
+      <audio id="practice-audio" src="assets/practice-audio.mp4"></audio>
+      <button id="play-btn" aria-label="播放/暫停">
+        <span id="icon-pause" style="display:none; gap:6px; flex-direction:row;">
+          <span style="width:5px; height:22px; background:oklch(56% 0.06 150); display:inline-block;"></span>
+          <span style="width:5px; height:22px; background:oklch(56% 0.06 150); display:inline-block;"></span>
+        </span>
+        <span id="icon-play" style="width:0; height:0; border-top:11px solid transparent; border-bottom:11px solid transparent; border-left:18px solid oklch(56% 0.06 150); margin-left:5px; display:inline-block;"></span>
+      </button>
+      <div style="width:100%; height:1px; background:oklch(29% 0.018 70 / 12%); margin-top:28px; position:relative;">
+        <div id="progress-bar" style="position:absolute; left:0; top:0; height:100%; width:0%; background:oklch(56% 0.06 150);"></div>
+      </div>
+      <div id="time-label" style="font-family:'Cormorant Garamond',serif; font-size:13px; color:oklch(52% 0.015 80); margin-top:10px; letter-spacing:0.05em;">0:00 ／ 0:00</div>
+    </div>
+    <p style="font-family:'Noto Serif TC',serif; font-size:13px; color:oklch(52% 0.015 80); text-align:center; line-height:1.8; margin:24px 0 0;">戴上耳機，找一個不會被打斷的角落。坐著或躺著都可以，眼睛閉上更好。</p>
+
+    <div id="reveal-link" style="text-align:center; margin-top:32px;">
+      <span id="reveal-trigger" style="font-family:'Noto Serif TC',serif; font-size:15px; font-weight:600; color:#2C5A46; text-decoration:underline; cursor:pointer;">點開，展開下一個任務</span>
+    </div>
+  </div>
+
+  <div id="reveal-section">
+    <div class="stripes" style="width:100%; height:240px; box-sizing:border-box;"></div>
+
+    <div style="padding:64px 32px; box-sizing:border-box;">
+      <div style="font-family:'Cormorant Garamond',serif; font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:oklch(52% 0.015 80); margin-bottom:18px;">A Daily Practice</div>
+      <h2 style="font-family:'Noto Serif TC',serif; font-weight:600; font-size:24px; color:#2C5A46; margin:0 0 26px; line-height:1.5;">接下來的一週，在每一天早上醒來之後先做這件事情</h2>
+      <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:1.9; color:oklch(52% 0.015 80);">
+        <p style="margin:0 0 18px;">每天醒來、還沒開始做任何事之前，先給自己這幾分鐘。</p>
+        <p style="margin:0 0 18px;">閉上眼睛，做幾次深呼吸，把注意力放回呼吸上，讓自己先回到身體裡。</p>
+        <p style="margin:0 0 18px;">把一隻手，輕輕放在胸口上。感受手掌的重量，感受底下心跳的節奏。</p>
+        <p style="margin:0 0 18px; font-weight:600; color:#2C5A46;">在心裡，輕輕喊出自己的名字，對自己說：「（你的名字），我愛你。」</p>
+        <p style="margin:0 0 18px;">停留在這裡，感受這份以愛陪伴自己的片刻。</p>
+        <p style="margin:0; font-weight:600; color:oklch(29% 0.018 70);">然後，才開始你的這一天。</p>
+      </div>
+    </div>
+
+    <div class="stripes" style="width:100%; height:240px; box-sizing:border-box;"></div>
+
+    <div style="padding:64px 32px; box-sizing:border-box; text-align:center;">
+      <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2; color:oklch(52% 0.015 80); margin-bottom:36px;">
+        <p style="margin:0 0 16px;">如果你喜歡這樣的生活練習，歡迎加入「感光生活圈」！那裡，有我自己在生活裡學習正念的體悟與觀察。</p>
+      </div>
+      <a href="https://lightlifechia.substack.com/about" target="_blank" rel="noopener" style="display:inline-block; border:1px solid #2C5A46; background:transparent; color:#2C5A46; padding:14px 30px; font-size:15px; font-family:'Noto Serif TC',serif; cursor:pointer; letter-spacing:0.05em; text-decoration:none;">加入感光生活圈</a>
+      <div style="font-family:'Noto Serif TC',serif; font-size:12px; color:oklch(52% 0.015 80); margin-top:14px; margin-bottom:36px;">免費訂閱，隨時可以取消。</div>
+      <div style="font-family:'Noto Serif TC',serif; font-size:16px; line-height:2; color:oklch(52% 0.015 80);">
+        <p style="margin:0 0 16px;">那是我在 Substack 建立的生活圈，和同樣想過上內心安定、舒適的生活的朋友們聚集之處。我會不定期寄封信給你，沒有推播、沒有演算法排序，就是安安靜靜地到你的信箱。</p>
+        <p style="margin:0;">如果你喜歡，<span style="color:#2C5A46;">按上方加入感光生活圈按鈕，到 Substack輸入你的Email訂閱（Subscribe）</span>，我們下回見！</p>
+      </div>
+
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:19px; color:#2C5A46; margin-top:48px; line-height:1.7; text-align:center;">
+        <div>讓我們一起，把生活活成一盞內在的光。</div>
+        <div>— Chia</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const audio = document.getElementById('practice-audio');
+  const playBtn = document.getElementById('play-btn');
+  const iconPlay = document.getElementById('icon-play');
+  const iconPause = document.getElementById('icon-pause');
+  const progressBar = document.getElementById('progress-bar');
+  const timeLabel = document.getElementById('time-label');
+  const revealLink = document.getElementById('reveal-link');
+  const revealTrigger = document.getElementById('reveal-trigger');
+  const revealSection = document.getElementById('reveal-section');
+
+  function fmt(sec) {
+    if (!isFinite(sec) || sec < 0) sec = 0;
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return m + ':' + String(s).padStart(2, '0');
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (audio.paused) { audio.play(); } else { audio.pause(); }
+  });
+  audio.addEventListener('play', () => {
+    playBtn.classList.add('playing');
+    iconPlay.style.display = 'none';
+    iconPause.style.display = 'flex';
+  });
+  audio.addEventListener('pause', () => {
+    playBtn.classList.remove('playing');
+    iconPlay.style.display = 'inline-block';
+    iconPause.style.display = 'none';
+  });
+  audio.addEventListener('ended', () => { audio.currentTime = 0; });
+  audio.addEventListener('timeupdate', () => {
+    const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+    progressBar.style.width = pct + '%';
+    timeLabel.textContent = fmt(audio.currentTime) + ' ／ ' + fmt(audio.duration);
+  });
+  audio.addEventListener('durationchange', () => {
+    timeLabel.textContent = fmt(audio.currentTime) + ' ／ ' + fmt(audio.duration);
+  });
+
+  revealTrigger.addEventListener('click', () => {
+    revealSection.classList.add('shown');
+    revealLink.classList.add('hidden');
+  });
+</script>
+</body>
+</html>
